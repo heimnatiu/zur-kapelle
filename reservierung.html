@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zimmeranfrage | Hotel zur Kapelle</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --vintage-bg: #f2e8d5; 
+            --ink: #1a1a1a;
+            --gold: #997950;
+            --forest-green: #1b3022;
+            --white: #fdfbf7;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background-color: var(--vintage-bg);
+            color: var(--ink);
+            line-height: 1.6;
+            background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 700px;
+            width: 100%;
+            border: 4px double var(--gold);
+            padding: 50px;
+            background: var(--white);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .antique-font { font-family: 'UnifrakturMaguntia', cursive; font-size: 3rem; color: var(--forest-green); margin-bottom: 20px; }
+        h2 { text-transform: uppercase; letter-spacing: 2px; margin-bottom: 30px; font-size: 1.2rem; color: var(--gold); }
+        p { font-size: 1.4rem; margin-bottom: 25px; }
+        .contact-box {
+            background: rgba(27, 48, 34, 0.05);
+            padding: 30px;
+            border-radius: 4px;
+            margin-bottom: 30px;
+        }
+        .contact-item {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--forest-green);
+            margin: 15px 0;
+            display: block;
+            text-decoration: none;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--gold);
+            transition: 0.3s;
+        }
+        .back-link:hover { color: var(--forest-green); border-color: var(--forest-green); }
+        .ornament { color: var(--gold); font-size: 2rem; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <span class="ornament">❦</span>
+        <h1 class="antique-font">Ihre Reservierung</h1>
+        <h2>Herzlichen Dank für Ihr Interesse</h2>
+        
+        <p>Um Ihnen den besten Preis und eine persönliche Beratung zu garantieren, nehmen wir Reservierungen aktuell gerne <strong>telefonisch</strong> oder per <strong>E-Mail</strong> entgegen.</p>
+        
+        <div class="contact-box">
+            <p style="font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px;">Rufen Sie uns an:</p>
+            <a href="tel:+41774331785" class="contact-item">+41 77 433 17 85</a>
+            
+            <p style="font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; margin-top: 20px;">Oder schreiben Sie uns:</p>
+            <a href="mailto:info@hotel-zur-kapelle.ch" class="contact-item" style="font-size: 1.5rem;">info@hotel-zur-kapelle.ch</a>
+        </div>
+
+        <p style="font-style: italic;">Wir freuen uns darauf, Sie bald im Chäpeli begrüssen zu dürfen!</p>
+        
+        <a href="index.html" class="back-link">← Zurück zur Startseite</a>
+    </div>
+
+</body>
+</html>

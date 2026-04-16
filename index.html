@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel zur Kapelle | Trimbach - "Chäpeli"</title>
+    
+    <!-- Google Fonts: Antike & Klassische Schriften -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --vintage-bg: #f2e8d5; 
+            --ink: #1a1a1a;
+            --gold: #997950;
+            --forest-green: #1b3022;
+            --white: #fdfbf7;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background-color: var(--vintage-bg);
+            color: var(--ink);
+            line-height: 1.6;
+            background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+        }
+
+        .antique-font { font-family: 'UnifrakturMaguntia', cursive; text-transform: none; }
+        .ornament { display: block; text-align: center; color: var(--gold); font-size: 2rem; margin: 10px 0; }
+
+        h1, h2, h3 { font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--forest-green); text-align: center; }
+
+        /* Navigation */
+        nav { border-bottom: 2px solid var(--gold); padding: 20px 0; background: rgba(253, 251, 247, 0.9); position: sticky; top: 0; z-index: 100; }
+        nav ul { display: flex; justify-content: center; list-style: none; gap: 40px; }
+        nav a { text-decoration: none; color: var(--ink); font-weight: 600; font-size: 1.2rem; }
+
+        /* Hero (Großes Titelbild mit optimierter Lesbarkeit) */
+        .hero { 
+            padding: 160px 20px; 
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center; 
+            border-bottom: 1px solid var(--gold); 
+            background: linear-gradient(rgba(242, 232, 213, 0.88), rgba(242, 232, 213, 0.88)), 
+                        url('hero.jpg'); 
+            background-size: cover; 
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .hero h1 { 
+            font-size: 5rem; 
+            margin-bottom: 5px; 
+            color: var(--forest-green);
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); 
+        }
+
+        .hero p {
+            font-size: 1.8rem;
+            font-style: italic;
+            color: var(--forest-green); 
+            font-weight: 700; 
+            max-width: 800px;
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+            margin-top: 10px;
+        }
+
+        /* Rezensionen-Banner */
+        .reviews-top-banner { 
+            background: var(--white); 
+            border-top: 2px solid var(--gold); 
+            border-bottom: 2px solid var(--gold); 
+            padding: 60px 20px; 
+            text-align: center;
+        }
+        .review-quote { font-style: italic; font-size: 1.4rem; max-width: 850px; margin: 0 auto 10px; color: var(--forest-green); }
+        .stars { color: var(--gold); font-size: 1.2rem; margin-bottom: 5px; }
+        .review-author { text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; color: var(--gold); margin-bottom: 40px; }
+        .review-author:last-child { margin-bottom: 0; }
+
+        /* Icons Bar */
+        .icon-bar { display: flex; justify-content: center; gap: 25px; flex-wrap: wrap; padding: 20px; background: var(--forest-green); color: var(--white); }
+        .icon-item { font-weight: bold; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* Sektionen */
+        section { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
+        .content-frame { border: 4px double var(--gold); padding: 40px; background: var(--white); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+
+        .hours-box {
+            margin-top: 25px;
+            padding: 20px;
+            border: 1px solid var(--gold);
+            background: #fdfaf3;
+            display: inline-block;
+            text-align: left;
+        }
+
+        .cta-button { 
+            display: inline-block; 
+            background: var(--forest-green); 
+            color: white; 
+            padding: 15px 35px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            margin-top: 20px; 
+            border: 1px solid var(--gold); 
+            transition: 0.3s; 
+        }
+        .cta-button:hover { background: var(--gold); color: var(--white); }
+
+        footer { background: var(--forest-green); color: var(--white); padding: 50px 20px; text-align: center; }
+
+        @media (max-width: 768px) { 
+            .grid { grid-template-columns: 1fr; } 
+            .hero h1 { font-size: 3rem; } 
+            .hero p { font-size: 1.3rem; }
+            .hero { padding: 100px 20px; min-height: 60vh; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="#hotel">Das Hotel</a></li>
+        <li><a href="#restaurant">Gaststube</a></li>
+        <li><a href="#anreise">Anreise</a></li>
+    </ul>
+</nav>
+
+<header class="hero">
+    <span class="ornament">❦</span>
+    <h1 class="antique-font">Hotel zur Kapelle</h1>
+    <p>Traditionelle Gastfreundschaft in historischem Gebäude</p>
+</header>
+
+<div class="icon-bar">
+    <div class="icon-item">✓ 14 Zimmer / 21 Betten</div>
+    <div class="icon-item">✓ Gratis WLAN</div>
+    <div class="icon-item">✓ Parkplätze</div>
+    <div class="icon-item">✓ Aufzug</div>
+    <div class="icon-item">✓ Barrierefrei</div>
+    <div class="icon-item">✓ Nichtraucher</div>
+</div>
+
+<!-- GÄSTESTIMMEN (JETZT MIT 4 REZENSIONEN) -->
+<div class="reviews-top-banner">
+    <h3 style="margin-bottom: 30px;">Das sagen unsere Gäste</h3>
+
+    <div>
+        <div class="stars">★★★★★</div>
+        <p class="review-quote">"Legendäre Knoblauchsuppe! Ein echtes Original im Chäpeli. Wir kommen immer wieder gerne vorbei."</p>
+        <p class="review-author">— Sandra M. (Google Rezension)</p>
+    </div>
+
+ <br>
+    <div>
+        <div class="stars">★★★★★</div>
+        <p class="review-quote">"Ein gemütliches Landhotel mit viel Charme. Das Frühstück war reichhaltig und die Bedienung äusserst zuvorkommend."</p>
+        <p class="review-author">— Monika L. (Google Rezension)</p>
+    </div>
+</div>
+
+<section id="hotel">
+    <div class="grid">
+        <div class="content-frame">
+            <h2 class="antique-font" style="text-transform: none; font-size: 2.5rem;">Übernachten im Chäpeli</h2>
+            <span class="ornament">❧</span>
+            <p>Unser traditionsreiches Hotel verfügt über <strong>14 gemütliche Zimmer</strong>. Alle Zimmer bieten kostenloses WLAN, TV, einen Schreibtisch sowie ein eigenes Bad mit Dusche/WC.</p>
+            <div style="margin-top: 25px;">
+                <p>Einzelzimmer ab <strong>CHF 90.00</strong></p>
+                <p>Doppelzimmer ab <strong>CHF 110.00</strong></p>
+            </div>
+            <a href="reservierung.html" class="cta-button">Zimmer jetzt anfragen</a>
+        </div>
+        <div>
+            <img src="zimmer.jpg" alt="Hotelzimmer" style="width: 100%; border: 8px solid white; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+        </div>
+    </div>
+</section>
+
+<section id="restaurant" style="background: rgba(27, 48, 34, 0.05); margin: 40px auto; border-radius: 4px;">
+    <div class="grid">
+        <div style="order: 2;">
+            <h2 class="antique-font" style="text-transform: none; font-size: 2.5rem;">Gaststube & Terrasse</h2>
+            <span class="ornament">❀</span>
+            <p>Erleben Sie feine Schweizer Küche und unser reichhaltiges Frühstücksbuffet. In den Sommermonaten lädt unsere <strong>Gartenterrasse</strong> zum Verweilen ein.</p>
+            
+            <div class="hours-box">
+                <h4 style="margin-bottom: 5px; color: var(--forest-green);">Öffnungszeiten Gaststube</h4>
+                <p><strong>Montag – Samstag:</strong> 09:00 – 23:30 Uhr</p>
+                <p><strong>Sonntag:</strong> Ruhetag</p>
+                <p><small><em>(Bankette sonntags auf Voranmeldung möglich)</em></small></p>
+            </div>
+        </div>
+        <div style="order: 1;">
+            <img src="restaurant.jpg" alt="Restaurant Ambiente" style="width: 100%; border: 8px solid white; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+        </div>
+    </div>
+</section>
+
+<section id="anreise">
+    <div class="content-frame" style="text-align: center;">
+        <h2 class="antique-font" style="text-transform: none; font-size: 2.5rem;">Anreise & Kontakt</h2>
+        <span class="ornament">❧</span>
+        <p><strong>Adresse:</strong> Baslerstrasse 90, 4632 Trimbach</p>
+        
+        <div style="border: 4px double var(--gold); line-height: 0; margin-top: 20px;">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2714.283184698305!2d7.892693876878347!3d47.35926347116817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47902e4f0a0e5b7b%3A0x6b7724a78736e9d6!2sBaslerstrasse%2090%2C%204632%20Trimbach!5e0!3m2!1sde!2sch!4v1709123456789!5m2!1sde!2sch" 
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+    </div>
+</section>
+
+<footer id="kontakt">
+    <div class="antique-font" style="font-size: 2.5rem; color: var(--gold); margin-bottom: 10px;">Hotel zur Kapelle</div>
+    <p>Baslerstrasse 90 | 4632 Trimbach</p>
+    <p style="font-size: 1.6rem; margin: 15px 0; font-weight: bold;">Telefon: +41 77 433 17 85</p>
+    <p>E-Mail: <a href="mailto:info@hotel-zur-kapelle.ch" style="color: white;">info@hotel-zur-kapelle.ch</a></p>
+    <br>
+    <p style="opacity: 0.7; font-size: 0.8rem;">&copy; Hotel Restaurant zur Kapelle | Alle Rechte vorbehalten.</p>
+</footer>
+
+</body>
+</html>
